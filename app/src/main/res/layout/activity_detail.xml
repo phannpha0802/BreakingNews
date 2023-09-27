@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".ui.activities.DetailActivity">
+
+	<LinearLayout
+		android:id="@+id/imageLayout"
+		android:layout_width="match_parent"
+		android:layout_height="300dp">
+
+		<com.google.android.material.imageview.ShapeableImageView
+			android:id="@+id/image"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scaleType="centerCrop"
+			android:src="@drawable/logo_2" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:paddingHorizontal="16dp">
+
+		<ImageView
+			android:id="@+id/buttonBack"
+			android:layout_width="32dp"
+			android:layout_height="32dp"
+			android:background="@drawable/back_icon_bg"
+			android:src="@drawable/back_icon"
+			app:tint="@color/white_color" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/imageLayout"
+		android:layout_marginHorizontal="12dp"
+		android:layout_marginTop="12dp">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<TextView
+				android:id="@+id/title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:ellipsize="end"
+				android:maxLines="2"
+				android:text="Making the most of Outdoor space for Bountiful an beautiful vegetable Garden."
+				android:textColor="@color/dark_color"
+				android:textSize="14sp"
+				android:textStyle="bold" />
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="12dp">
+
+				<TextView
+					android:id="@+id/author"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="12dp"
+					android:text="author"
+					android:textColor="@color/orange_color"
+					android:textSize="12sp" />
+
+				<TextView
+					android:id="@+id/publishedAt"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Published at"
+					android:textColor="@color/dark_color"
+					android:textSize="12sp" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp">
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="8dp"
+					android:gravity="center_vertical">
+
+					<ImageView
+						android:layout_width="24dp"
+						android:layout_height="24dp"
+						android:layout_marginEnd="4dp"
+						android:padding="4dp"
+						android:src="@drawable/favorite_icon"
+						app:tint="@color/orange_color" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="2.3 K"
+						android:textColor="@color/dark_color"
+						android:textSize="12sp" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginEnd="8dp"
+					android:gravity="center_vertical">
+
+					<ImageView
+						android:layout_width="24dp"
+						android:layout_height="24dp"
+						android:layout_marginEnd="4dp"
+						android:padding="4dp"
+						android:src="@drawable/message_icon"
+						app:tint="@color/orange_color" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="21 K"
+						android:textColor="@color/dark_color"
+						android:textSize="12sp" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center_vertical">
+
+					<ImageView
+						android:layout_width="24dp"
+						android:layout_height="24dp"
+						android:layout_marginEnd="4dp"
+						android:padding="4dp"
+						android:src="@drawable/share_icon"
+						app:tint="@color/orange_color" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="1.0 K"
+						android:textColor="@color/dark_color"
+						android:textSize="12sp" />
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<TextView
+				android:id="@+id/description"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:ellipsize="end"
+				android:maxLines="4"
+				android:text="Making the most of Outdoor space for Bountiful an beautiful vegetable Garden."
+				android:textColor="@color/dark_color"
+				android:textSize="12sp" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="12dp"
+				android:ellipsize="end"
+				android:maxLines="2"
+				android:text="Content"
+				android:textColor="@color/dark_color"
+				android:textSize="12sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/content"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="4dp"
+				android:ellipsize="end"
+				android:text="Making the most of Outdoor space for Bountiful an beautiful vegetable Garden."
+				android:textColor="@color/dark_color"
+				android:textSize="12sp" />
+		</LinearLayout>
+	</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".ui.activities.SocialActivity">
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<LinearLayout
+			android:id="@+id/mainContentLayoutSocialScreen"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<!--	app bar layout start-->
+			<LinearLayout
+				android:id="@+id/appBarLayoutSocialScreen"
+				android:layout_width="match_parent"
+				android:layout_height="70dp"
+				android:layout_marginStart="8dp"
+				android:layout_marginEnd="16dp"
+				android:gravity="center_vertical">
+
+				<ImageView
+					android:id="@+id/logoCompanySocialScreen"
+					android:layout_width="60dp"
+					android:layout_height="60dp"
+					android:src="@drawable/breacking_news_logo" />
+
+				<Space
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:layout_weight="1" />
+
+				<ImageView
+					android:id="@+id/btnNotificationSocialScreen"
+					android:layout_width="32dp"
+					android:layout_height="32dp"
+					android:padding="4dp"
+					android:src="@drawable/notification_icon"
+					app:tint="@color/lighter_orange_color" />
+
+			</LinearLayout>
+			<!--	app bar layout end-->
+
+			<!--	top menu category start-->
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/rcMenuCategorySocialScreen"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="16dp" />
+			<!--	top menu category start-->
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginHorizontal="12dp"
+				android:layout_marginTop="12dp">
+
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/rcNews"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content" />
+
+				<com.facebook.shimmer.ShimmerFrameLayout
+					android:id="@+id/loadingAnimation"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					tools:visibility="visible">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:orientation="vertical">
+
+						<include layout="@layout/news_shimmer_loading_layout" />
+
+						<include layout="@layout/news_shimmer_loading_layout" />
+
+					</LinearLayout>
+
+				</com.facebook.shimmer.ShimmerFrameLayout>
+
+			</RelativeLayout>
+
+		</LinearLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity">
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<!--	app bar layout start-->
+			<LinearLayout
+				android:id="@+id/appBarLayout"
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:gravity="center_vertical"
+				android:paddingHorizontal="16dp">
+
+				<ImageView
+					android:id="@+id/logoCompany"
+					android:layout_width="60dp"
+					android:layout_height="60dp"
+					android:src="@drawable/breacking_news_logo" />
+
+				<Space
+					android:layout_width="0dp"
+					android:layout_height="0dp"
+					android:layout_weight="1" />
+
+				<ImageView
+					android:id="@+id/btnNotification"
+					android:layout_width="32dp"
+					android:layout_height="32dp"
+					android:padding="4dp"
+					android:src="@drawable/notification_icon"
+					app:tint="@color/lighter_orange_color" />
+
+			</LinearLayout>
+			<!--	app bar layout end-->
+
+			<!--	tab category start-->
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/rcCategory"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="16dp"
+				app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+			<!--	tab category end-->
+
+			<!--	highlighted news start-->
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="350dp"
+				android:layout_marginHorizontal="12dp"
+				android:layout_marginTop="16dp"
+				android:background="@drawable/highlighted_new_bg"
+				android:orientation="vertical"
+				android:padding="12dp">
+
+				<!--	text description start-->
+				<LinearLayout
+					android:id="@+id/textLayout"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/title"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:ellipsize="end"
+						android:maxLines="2"
+						android:text="Making the most of Outdoor space for Bountiful an beautiful vegetable Garden."
+						android:textColor="@color/dark_color"
+						android:textSize="14sp"
+						android:textStyle="bold" />
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="12dp">
+
+						<TextView
+							android:id="@+id/author"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginEnd="12dp"
+							android:text="author"
+							android:textColor="@color/orange_color"
+							android:textSize="12sp" />
+
+						<TextView
+							android:id="@+id/publishedAt"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Published at"
+							android:textColor="@color/dark_color"
+							android:textSize="12sp" />
+					</LinearLayout>
+
+				</LinearLayout>
+				<!--	text description start-->
+
+				<!--	image highlighted start-->
+				<LinearLayout
+					android:id="@+id/imageLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@id/textLayout"
+					android:layout_marginTop="12dp">
+
+					<com.google.android.material.imageview.ShapeableImageView
+						android:id="@+id/image1"
+						android:layout_width="150dp"
+						android:layout_height="220dp"
+						android:layout_marginEnd="12dp"
+						android:scaleType="centerCrop"
+						android:src="@drawable/poster_4"
+						app:shapeAppearanceOverlay="@style/Circular" />
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<com.google.android.material.imageview.ShapeableImageView
+							android:id="@+id/image2"
+							android:layout_width="150dp"
+							android:layout_height="100dp"
+							android:scaleType="centerCrop"
+							android:src="@drawable/poster_4"
+							app:shapeAppearanceOverlay="@style/Circular" />
+
+						<com.google.android.material.imageview.ShapeableImageView
+							android:id="@+id/image3"
+							android:layout_width="150dp"
+							android:layout_height="100dp"
+							android:layout_marginTop="20dp"
+							android:scaleType="centerCrop"
+							android:src="@drawable/poster_4"
+							app:shapeAppearanceOverlay="@style/Circular" />
+					</LinearLayout>
+
+				</LinearLayout>
+				<!--	image highlighted start-->
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_below="@id/imageLayout"
+					android:layout_marginTop="8dp">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginEnd="8dp"
+						android:gravity="center_vertical">
+
+						<ImageView
+							android:layout_width="24dp"
+							android:layout_height="24dp"
+							android:layout_marginEnd="4dp"
+							android:padding="4dp"
+							android:src="@drawable/favorite_icon"
+							app:tint="@color/orange_color" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="2.3 K"
+							android:textColor="@color/dark_color"
+							android:textSize="12sp" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginEnd="8dp"
+						android:gravity="center_vertical">
+
+						<ImageView
+							android:layout_width="24dp"
+							android:layout_height="24dp"
+							android:layout_marginEnd="4dp"
+							android:padding="4dp"
+							android:src="@drawable/message_icon"
+							app:tint="@color/orange_color" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="21 K"
+							android:textColor="@color/dark_color"
+							android:textSize="12sp" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:gravity="center_vertical">
+
+						<ImageView
+							android:layout_width="24dp"
+							android:layout_height="24dp"
+							android:layout_marginEnd="4dp"
+							android:padding="4dp"
+							android:src="@drawable/share_icon"
+							app:tint="@color/orange_color" />
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="1.0 K"
+							android:textColor="@color/dark_color"
+							android:textSize="12sp" />
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</RelativeLayout>
+			<!--	highlighted news start-->
+
+			<!--	popular redaction start-->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="12dp"
+				android:layout_marginTop="16dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Popular Redactions"
+					android:textColor="@color/dark_color"
+					android:textStyle="bold" />
+
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/rcPopularRedaction"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp" />
+
+			</LinearLayout>
+			<!--	popular redaction end-->
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="12dp"
+				android:layout_marginTop="16dp"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Browse By"
+					android:textColor="@color/dark_color"
+					android:textStyle="bold" />
+
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/rcBrowseBy"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp" />
+
+			</LinearLayout>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="12dp"
+				android:layout_marginTop="12dp">
+
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/rcNews"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content" />
+			</RelativeLayout>
+
+		</LinearLayout>
+
+	</androidx.core.widget.NestedScrollView>
+</LinearLayout>
