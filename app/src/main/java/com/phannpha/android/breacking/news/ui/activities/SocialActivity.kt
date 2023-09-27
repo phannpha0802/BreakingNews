@@ -154,6 +154,6 @@ class SocialActivity : AppCompatActivity() {
 	}
 
 	private fun test() {
-
+		val name = "Por Srenghong"
 	}
 }
