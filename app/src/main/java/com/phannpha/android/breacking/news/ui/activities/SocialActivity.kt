@@ -152,4 +152,8 @@ class SocialActivity : AppCompatActivity() {
 		view.layoutManager = layout
 		view.adapter = articleAdapter
 	}
+
+	private fun test() {
+
+	}
 }
